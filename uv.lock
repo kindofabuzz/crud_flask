@@ -37,14 +37,25 @@ name = "crud-flask"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "dart-sass" },
     { name = "flask" },
     { name = "flask-sqlalchemy" },
 ]
 
 [package.metadata]
 requires-dist = [
+    { name = "dart-sass", specifier = ">=0.5.2" },
     { name = "flask", specifier = ">=3.1.2" },
     { name = "flask-sqlalchemy", specifier = ">=3.1.1" },
+]
+
+[[package]]
+name = "dart-sass"
+version = "0.5.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/b5/e7/3a96220f4712fedecd92d1d2aeb26f55e10760881e48537d5bc596e34670/dart-sass-0.5.2.tar.gz", hash = "sha256:fb0d74037936f524746d90ecbb28213af3054ae3340a7f344f9c2d6fb6cbc866", size = 60772289, upload-time = "2022-05-03T05:07:42.201Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/dc/a9/6eeabd15e7b93376ca94ad9fdb9ef87bfa686fbe8a3dd24f9db8d25b7c01/dart_sass-0.5.2-py3-none-any.whl", hash = "sha256:7844f2e2de071903621cf621df7d90876a2be23912b23d5722e560e5daaa86b5", size = 61086405, upload-time = "2022-05-03T05:07:01.038Z" },
 ]
 
 [[package]]

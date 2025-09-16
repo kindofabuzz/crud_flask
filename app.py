@@ -8,6 +8,7 @@ app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
 db = SQLAlchemy(app)
 
+
 # Data class ~ Row of data
 class MyTask(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -37,9 +38,10 @@ def index():
         tasks = MyTask.query.order_by(MyTask.created).all()
         return render_template("index.html", tasks=tasks)
 
+
 # Delete an item
 @app.route("/delete/<int:id>")
-def delete(id:int):
+def delete(id: int):
     delete_task = MyTask.query.get_or_404(id)
     try:
         db.session.delete(delete_task)
@@ -48,9 +50,10 @@ def delete(id:int):
     except Exception as e:
         return f"ERROR: {e}"
 
+
 # Edit an item
 @app.route("/edit/<int:id>", methods=["GET", "POST"])
-def edit(id:int):
+def edit(id: int):
     update_task = MyTask.query.get_or_404(id)
     if request.method == "POST":
         update_task.content = request.form["content"]
@@ -61,6 +64,7 @@ def edit(id:int):
             return f"ERROR: {e}"
     else:
         return render_template("edit.html", task=update_task)
+
 
 if __name__ == "__main__":
     with app.app_context():

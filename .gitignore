@@ -1,0 +1,27 @@
+#.venv
+#venv/
+#.idea
+#idea/
+
+# PyCharm specific
+.idea/workspace.xml
+.idea/misc.xml
+.idea/vcs.xml
+.idea/modules.xml # Consider if this is truly local or project-wide
+.idea/inspectionProfiles/
+.idea/libraries/
+
+# Python specific
+*.pyc
+__pycache__/
+.venv/
+venv/
+env/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log

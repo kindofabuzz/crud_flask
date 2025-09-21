@@ -20,7 +20,7 @@ class MyTask(db.Model):
         return f"Task {self.id}"
 
 
-# Add an item
+# Add an item &
 @app.route("/", methods=["POST", "GET"])
 def index():
     if request.method == "POST":

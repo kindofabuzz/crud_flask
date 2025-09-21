@@ -1,7 +1,7 @@
 [project]
 name = "crud-flask"
-version = "0.1.0"
-description = "Add your description here"
+version = "1.0.5"
+description = "CRUD Task List"
 requires-python = ">=3.13"
 dependencies = [
     "dart-sass>=0.5.2",

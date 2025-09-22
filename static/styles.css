@@ -2,7 +2,7 @@ body {
   font-family: "MesloLGM Nerd Font";
   margin: 0;
   padding: 0;
-  background-color: wheat;
+  background-color: rgba(60, 142, 182, 0.75);
 }
 
 .content {

@@ -65,6 +65,10 @@ def edit(id: int):
     else:
         return render_template("edit.html", task=update_task)
 
+@app.route("/code")
+def code():
+    return render_template("code.html")
+
 
 if __name__ == "__main__":
     with app.app_context():
